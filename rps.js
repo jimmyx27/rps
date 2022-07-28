@@ -13,29 +13,30 @@ cpuChoice = cpuChoice.toLowerCase()
 console.log(cpuChoice);
 function play(p1Choice, cpuChoice) {
     if (p1Choice === cpuChoice) {
-    alert("TIE!"); 
-    }
-    if (p1Choice === "rock" && cpuChoice === "paper" ||
+        return  "tie";
+    } else if (p1Choice === "rock" && cpuChoice === "paper" ||
     p1Choice === "paper" && cpuChoice === "scissors"||
     p1Choice === "scissors" && cpuChoice === "rock") {
-    return "cpu";
-        alert("YOU SUCK LOSER!");
-    }
-    if (p1Choice === "rock"  && cpuChoice === "scissors" ||
+        return "cpu";
+    } else if (p1Choice === "rock"  && cpuChoice === "scissors" ||
     p1Choice === "scissors" && cpuChoice === "paper" ||
-    p1Choice === "paper" && cpuChoice === "rock")
-    return "p1";
-    alert("DING DING WEINNER!");
+    p1Choice === "paper" && cpuChoice === "rock") {
+        return "p1";
+    }
 }
-play(p1Choice, cpuChoice)
-//let p1Score = 0
-//let cpuScore = 0
-//let pts = "P1:" + p1Score +  "cpu:" + cpuScore; 
-//function game() {
-//       let result = play(p1Choice, cpuChoice);
-//        if (result === "p1") {
-//            p1Score++;
-//            a
-//        }
-//        
-//    }
+let p1Score = 0
+let cpuScore = 0
+let pts = "p1:" + p1Score +  "cpu:" + cpuScore; 
+function game() {
+       let result = play(p1Choice, cpuChoice);
+        if (result = "tie") {
+            alert("tie");
+        } else if (result = "cpu") {
+            cpuScore++;
+            alert("YOU SUCK LOSER!" + " cpu pts:" + cpuScore);
+        } else if (result = "p1") {
+            p1Score++;
+            alert("DING DING WEINNER!" + " p1 pts:" + p1Score);
+}
+    }
+game()
