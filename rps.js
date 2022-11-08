@@ -9,7 +9,7 @@ function getComputerChoice() {  //gives cpu random choice
     return rpsarray[Math.floor(Math.random() * rpsarray.length)];
 }
 let cpuChoice = getComputerChoice();  // turns function into variable
-cpuChoice = cpuChoice.toLowerCase()
+cpuChoice = cpuChoice.toLowerCase();
 console.log(cpuChoice);
 function play(p1Choice, cpuChoice) {
     if (p1Choice === cpuChoice) {
