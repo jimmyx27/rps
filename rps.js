@@ -1,14 +1,14 @@
 let p1Choice = prompt("rps?"); //gets player choice
 p1Choice = p1Choice.toLowerCase() // case sensitive with line 11
-var rpsarray = [  //cpu choices 
+let rpsarray = [  //cpu choices 
     "rock",
     "paper",
-    "scissors"
+    "scissors",
 ];
 function getComputerChoice() {  //gives cpu random choice
     return rpsarray[Math.floor(Math.random() * rpsarray.length)];
 }
-var cpuChoice = getComputerChoice();  // turns function into variable
+let cpuChoice = getComputerChoice();  // turns function into variable
 cpuChoice = cpuChoice.toLowerCase()
 console.log(cpuChoice);
 function play(p1Choice, cpuChoice) {
@@ -29,12 +29,12 @@ let cpuScore = 0
 let pts = "p1:" + p1Score +  "cpu:" + cpuScore; 
 function game() {
        let result = play(p1Choice, cpuChoice);
-        if (result = "tie") {
+        if (result === "tie") {
             alert("tie");
-        } else if (result = "cpu") {
+        } else if (result === "cpu") {
             cpuScore++;
             alert("YOU SUCK LOSER!" + " cpu pts:" + cpuScore);
-        } else if (result = "p1") {
+        } else if (result === "p1") {
             p1Score++;
             alert("DING DING WEINNER!" + " p1 pts:" + p1Score);
 }
